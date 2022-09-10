@@ -64,10 +64,14 @@ public class CatTests
         cheetahCat.Eat().Should().Be("Zzzzzzz");
     }
 
+    // honestly I'm not sure about this solution for a test
     [Test]
     public void DomesticCat_Should_Make_A_Sound_When_Eat_Is_Called()
     {
         DomesticCat domesticCat = new();
-        domesticCat.Eat().Should().Be("Purrrrrrr");
+        if (!domesticCat.IsRestless())
+            domesticCat.Eat().Should().Be("Purrrrrrr");
+        else
+            domesticCat.Eat().Should().Be("It will do I suppose");
     }
 }

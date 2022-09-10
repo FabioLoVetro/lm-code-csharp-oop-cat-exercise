@@ -13,12 +13,12 @@ namespace OopCatExercise
 
         public abstract string Eat();
 
-		public virtual void GoToSleep()
+		public void GoToSleep()
 		{
 			this._isAsleep = true;
 		}
         
-        public virtual void WakeUp()
+        public void WakeUp()
         {
             this._isAsleep = false;
         }
